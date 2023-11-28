@@ -68,6 +68,11 @@ html, body {
     grid-column: 2/5;
     text-align: left;
   }
+  #respue{
+    grid-row: 4/5;
+    grid-column: 6/9;
+    text-align: left;
+  }
   #preg1{
     grid-row: 5/6;
     grid-column: 2/5;
@@ -165,7 +170,7 @@ html, body {
     padding: 1.2rem;
     margin: auto;
     background-color: #94d3d0;
-    color: rgb(24, 46, 80);
+    color: rgb(24, 80, 49);
     box-shadow: none;
     border: 1px solid #94d3d0;
   }
@@ -220,23 +225,7 @@ html, body {
         font-size: 1rem;        
     }
     #InicioBoton:hover{
-      
         text-shadow: 0 0 .33rem rgb(42, 184, 132), 0 0 1rem rgb(42, 184, 132), 0 0 2rem rgb(42, 184, 132), 0 0 3rem rgb(42, 184, 132);
         font-weight: 600;
     }
-    #recuerda{
-        justify-content: space-between;
-        color: black;
-        align-self: flex-end;
-        display: flex;
-        justify-content: center;
-        
-    }
 
-
-    #nuevo{
-        grid-row: 5/5;
-        grid-column: 4/5;
-        display: flex;
-        justify-self: right;
-    }

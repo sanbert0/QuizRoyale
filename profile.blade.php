@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="scss/profile.css">
+    <link rel="stylesheet" href="{{('css/profile.css')}}">
+    <link rel="stylesheet" href="{{('scss/profile.css')}}">
 
 </head>
 <body class="fondo">
@@ -60,7 +60,7 @@
                       </svg>
 
                       
-                          <ul class="tablilla" name="tablilla" id="materias">
+                        <ul class="tablilla" name="tablilla" id="materias">
                             <li id="mas">
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0f1953" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -69,7 +69,24 @@
                                 <path d="M12 9v6" />
                               </svg>
                             </li>
-                            <li class=" materia" id="ancho">
+                            @foreach ()
+                            <li class=" materia">
+                                <p id="id">ID</p>
+                                <p id="mat">Clase</p>
+                                <p id="prof">Profesor</p>
+                                <p id="acumlab">Puntos: </p>
+                                <p id="acum">00000</p>
+                            </li>
+                            @endforeach
+                            <!--
+                            <li class=" materia">
+                              <p id="id">ID</p>
+                              <p id="mat">Clase</p>
+                              <p id="prof">Profesor</p>
+                              <p id="acumlab">Puntos: </p>
+                              <p id="acum">00000</p>
+                            </li>
+                            <li class=" materia">
                                 <p id="id">ID</p>
                                 <p id="mat">Clase</p>
                                 <p id="prof">Profesor</p>
@@ -77,27 +94,13 @@
                                 <p id="acum">00000</p>
                             </li>
                             <li class=" materia">
-                              <p id="id">ID</p>
-                              <p id="mat">Clase</p>
-                              <p id="prof">Profesor</p>
-                              <p id="acumlab">Puntos: </p>
-                              <p id="acum">00000</p>
-                          </li>
-                          <li class=" materia">
-                            <p id="id">ID</p>
-                            <p id="mat">Clase</p>
-                            <p id="prof">Profesor</p>
-                            <p id="acumlab">Puntos: </p>
-                            <p id="acum">00000</p>
-                        </li>
-                        <li class=" materia">
-                          <p id="id">ID</p>
-                          <p id="mat">Clase</p>
-                          <p id="prof">Profesor</p>
-                          <p id="acumlab">Puntos: </p>
-                          <p id="acum">00000</p>
-                      </li>
-                          </ul>
+                                <p id="id">ID</p>
+                                <p id="mat">Clase</p>
+                                <p id="prof">Profesor</p>
+                                <p id="acumlab">Puntos: </p>
+                                <p id="acum">00000</p>
+                          </li>-->
+                        </ul>
                     </div>
                     
                     <p id="awardtag">Premios</p>
@@ -144,7 +147,7 @@
         </form>
     </div>
 </body>
-<script src="js/profile.js"></script>
+<script src="{{('js/profile.js')}}"></script>
 </html>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
