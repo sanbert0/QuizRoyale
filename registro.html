@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+
+</head>
+<body class="fondo">
+    <div class="blur" style="text-align: center;">
+        <form name="frm" id="frm" >
+                <div class="Rectángulo_1">
+                    <div class="form_container" id="nom">
+                        <input type="text" name="nombre" id="nombre" class="form_input" placeholder="Nombre" onchange="validacion();">
+                    </div>
+                    <div class="form_container" id="ape">
+                         <input type="text" name="apellido" id="apellido" class="form_input" placeholder="Apellido" onchange="validacion();">
+                    </div>
+                    <div class="form_container" id="mat">
+                        <input type="text" name="matricula" id="matricula" class="form_input" placeholder="Matricula" onchange="validacion();">
+                    </div>
+
+                    <div id="feNa">
+                        <p>Fecha de Nacimiento</p>
+                    </div>
+                    <div id="usuar">
+                        <img src="Images/Usuario_icono.png" class="usuario">
+                    </div>
+                    <div class="form_container" id="dia">
+                        <input type="text" name="dia"  class="form_input naci" placeholder="Dia" onchange="validacion();">
+                    </div>
+                    <div class="form_container" id="mes">
+                    <input type="text" name="mes"  class="form_input naci" placeholder="Mes" onchange="validacion();">
+                    </div>
+                    <div class="form_container" id="anio">
+                    <input type="text" name="anio"  class="form_input naci" placeholder="Año" onchange="validacion();">
+                    </div>
+
+                    <div class="form_container" id="ema">
+                         <input type="text" name="email"  class="form_input" placeholder="E-mail" onchange="validacion();">
+                    </div>
+                    <div class="form_container" id="contra">
+                        <input type="password" name="contraseña"  class="form_input" placeholder="Contraseña" onchange="validacion();">
+                   </div>
+                   <div class="form_container" id="conf">
+                        <input type="password" name="confirmar"  class="form_input" placeholder="Confirmar Contraseña" onchange="validacion();">
+                    </div>
+                    
+                       
+                </div>
+                <div id="login">
+                    <button type="submit" class="btn btn-primary" id="InicioBoton">Registrarme</button>
+                </div>
+
+        </form>
+    </div>
+</body>
+</html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">

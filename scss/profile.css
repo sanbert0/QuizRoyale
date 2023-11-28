@@ -1,0 +1,129 @@
+.premios {
+  width: 90%;
+  height: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: scroll;
+}
+
+.premios::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 70%;
+}
+
+.premios::-webkit-scrollbar-thumb {
+  background: #0f1953;
+  border-radius: 50px;
+}
+
+.tabla {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+}
+.tabla li {
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.tabla .table-header {
+  background-color: #0f1953;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+  margin-bottom: 1.3rem;
+  margin-top: none;
+}
+.tabla .table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgb(0, 0, 0);
+  margin-bottom: 0.7rem;
+}
+.tabla .col-1 {
+  flex-basis: 10%;
+}
+.tabla .col-2 {
+  flex-basis: 40%;
+}
+.tabla .col-3 {
+  flex-basis: 20%;
+}
+.tabla .col-4 {
+  flex-basis: 25%;
+}
+
+.clases {
+  overflow-x: scroll;
+}
+
+.tablilla::-webkit-scrollbar {
+  height: 0rem;
+  width: 70%;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+  align-self: flex-start;
+}
+
+.tablilla::-webkit-scrollbar-thumb {
+  background: #0f1953;
+  border-radius: 50px;
+}
+
+.tablilla {
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  display: -webkit-inline-box;
+  justify-content: right;
+  height: 18rem;
+  width: 100%;
+  position: relative;
+}
+
+.materia {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 2px #0f1953;
+  -o-border-image: linear-gradient(#0c0e9f, #3cc4f6) 30;
+     border-image: linear-gradient(#0c0e9f, #3cc4f6) 30;
+  height: 15rem;
+  width: 15rem;
+  border-width: 2px;
+  border-radius: 1rem;
+  display: grid;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  justify-content: center;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-columns: 20% 40% 40%;
+}
+.materia #id, .materia #mat, .materia #prof, .materia #acum, .materia #acumlab {
+  font-size: 1rem;
+}
+.materia #id {
+  color: #0f1953;
+}
+.materia #mat {
+  color: #94b2d3;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  justify-self: center;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.materia #prof {
+  color: #94b2d3;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  justify-self: center;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.materia #acum {
+  color: #94b2d3;
+}
+.materia #acumlab {
+  color: #0f1953;
+}/*# sourceMappingURL=profile.css.map */

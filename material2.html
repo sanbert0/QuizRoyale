@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material</title>
+    <link rel="stylesheet" href="css/material2.css">
+
+</head>
+<body class="fondo">
+    <div class="blur" style="text-align: center;">
+        <form name="frm" id="frm" >
+                <div class="Rectángulo_1">
+                    <p id="indica"> Rellena el siguiente formulario con los datos que se te piden:</p>
+                    <p id="puntos">100</p>
+                    <p id="puntoss">puntos</p>
+                    <div class="form_container" id="tema">
+                        <input type="text" name="tema" id="tema" class="form_input" placeholder="Tema de las preguntas" >
+                    </div>
+                    <div  id="preg">
+                         <input type="text" name="preg1" id="preg1" class="pregunta_input" placeholder="Pregunta #1" value="" >
+                    </div>
+                    <div class="form_container" id="resp1">
+                        <textarea id="respi1" class="respuesta_input" cols="30" rows="10" placeholder="Respuesta correcta"></textarea>
+                    </div>
+                    
+                    <div class="form_container" id="resp2">
+                        <textarea id="respi2" class="respuesta_input" cols="30" rows="10" placeholder="Respuesta incorrecta 1"></textarea>
+                    </div>
+                    <div class="form_container" id="resp3">
+                        <textarea id="respi3" class="respuesta_input" cols="30" rows="10" placeholder="Respuesta incorrecta 2"></textarea>
+                    </div>
+                    <div class="form_container" id="resp4">
+                        <textarea id="respi4" class="respuesta_input" cols="30" rows="10" placeholder="Respuesta incorrecta 3"></textarea>
+                    </div>
+                    <button type="button" id="adelante" onclick="forward();">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-caret-right" width="80" height="80" viewBox="0 0 24 24" stroke-width="2" stroke="rgb(24, 80, 60)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M10 18l6 -6l-6 -6v12" />
+                        </svg>
+                    </button>
+                    <button type="button" id="atras" onclick="backward();">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-caret-right" width="80" height="80" viewBox="0 0 24 24" stroke-width="2" stroke="rgb(24, 80, 60)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M10 18l6 -6l-6 -6v12" />
+                        </svg>
+                    </button>
+                       
+                </div>
+                <div id="login">
+                    <button type="submit" class="btn btn-primary" id="InicioBoton">Guardar</button>
+                </div>
+
+        </form>
+    </div>
+</body>
+<script src="js/material.js"></script>
+</html>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">

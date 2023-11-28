@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body class="fondo">
+    <div class="blur" style="text-align: center;">
+        <img src="Images/Usuario_icono.png" class="usuario">
+                <form name="frm" id="frm" >
+                    <div class="Rectángulo_1">
+                        <div class="form_container" id="us">
+                            <input type="text" name="email" id="email" class="form_input" placeholder="E-mail o Matricula" onchange="validacion();">
+                        </div>
+                        <div class="form_container" id="contra">
+                             <input type="password" name="contra"  class="form_input" placeholder="Contraseña" onchange="validacion();">
+                        </div>
+                        <div class="form_container" id="Recuerda">
+                            <label ><input type="checkbox" id="cbox1" value="1"/>Recuerdame <span class="checkmark"></span></label> 
+                            
+                        </div>
+                        <div id="nuevo">
+                            <a href="registro.html" id="Nohay">No tengo una cuenta</a>
+                        </div>
+                           
+                    </div>
+                    <div id="login">
+                        <button type="submit" class="btn btn-primary" id="InicioBoton">Inicar Sesión</button>
+                    </div>
+                </form>
+                
+
+            
+    </div>
+</body>
+</html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
