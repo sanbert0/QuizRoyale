@@ -29,3 +29,56 @@ function scrollLeftNx() {
     } //Muestra en consola la posicion del scroll
 
 }
+
+//box que sigue el cursor
+
+
+//detecta el mouse
+function isMoving(){
+    try{
+        document.createEvent("TouchEvent");
+        return true;
+    } catch (e){
+        return false;
+    }
+}
+
+const move = (e) =>{
+    try{
+        //detecta la posicion del mouse
+        var x = !isMoving() ? e.pageX : e.touches[0].pageX;
+        var y = !isMoving() ? e.pageY : e.touches[0].pageY;
+    }
+    catch(e){}
+        mensaje.style.left = x - 30 + "px";
+        mensaje.style.top = y - 30 + "px";
+
+    };
+document.addEventListener("mousemove", (e) => {
+    move(e);
+});
+
+document.addEventListener("touchmove", (e) => {
+    move (e);
+});
+
+var x;
+var y;
+function position(event){
+    var mensaje = document.getElementById('message');
+	x = event.clientX;
+	y = event.clientY;
+    mensaje.style.left = x + "px";
+    mensaje.style.top = y - 80 + "px";
+}
+window.addEventListener('mousemove', position);
+
+function mostrarCuadro(){
+    var mensaje = document.getElementById('message');
+    mensaje.style.display = "flex"
+    
+}
+function noMostrar(){
+    var mensaje = document.getElementById('message');
+    mensaje.style.display = "none";
+}

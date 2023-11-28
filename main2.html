@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Royale</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body class="fondo">
+    <div class="area" >
+        <ul class="circles">
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+        </ul>
+</div >
+    <img src="Images/Logo.png" id="logo">
+    <div class="buttonMain" id="uno">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" id="play"width="120" height="120" viewBox="0 0 24 24" stroke-width="2" stroke="#002342" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 4v16l13 -8z" />
+        </svg>
+    </div>
+    <div class="button" id="dos" onclick="window.location='login.html';">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" id="user" width="80" height="80" viewBox="0 0 24 24" stroke-width="2" stroke="#002342" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+        </svg>
+    </div>
+    <div class="button" id="tres">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clipboard-data" id="report"width="80" height="80" viewBox="0 0 24 24" stroke-width="2" stroke="#002342" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+            <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+            <path d="M9 17v-4" />
+            <path d="M12 17v-1" />
+            <path d="M15 17v-2" />
+            <path d="M12 17v-1" />
+          </svg>
+    </div>
+    <div id="modal" class="open">
+        <div id="modalcontainer">
+            <a id="close" onclick="closeModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-playstation-x" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#002342" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z" />
+                    <path d="M8.5 8.5l7 7" />
+                    <path d="M8.5 15.5l7 -7" />
+                  </svg>
+            </a>
+            <div id="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-gamepad" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M2 6m0 2a2 2 0 0 1 2 -2h16a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-16a2 2 0 0 1 -2 -2z" />
+                    <path d="M6 12h4m-2 -2v4" />
+                    <path d="M15 11l0 .01" />
+                    <path d="M18 13l0 .01" />
+                  </svg>
+            </div>
+            <div id="texto"> 
+                <p>Ingresa el ID para unirte</p>
+            </div>
+            <input type="text" id="ID">
+        </div>
+        <a href="">
+            <div id="Jugar">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-caret-right" width="80" height="80" viewBox="0 0 24 24" stroke-width="2" stroke="#002342" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 18l6 -6l-6 -6v12" />
+                </svg>
+            </div>
+        </a>
+        
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">

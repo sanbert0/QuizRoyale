@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="{{('css/profile.css')}}">
-    <link rel="stylesheet" href="{{('scss/profile.css')}}">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="scss/profile.css">
 
 </head>
 <body class="fondo" onmousemove="position(event);">
     <div class="blur" style="text-align: center;">
         
-        
+        <form name="frm" id="frm" >
                 <div class="Rectángulo_1">
                     <a class="uwu" href="{{route('main2')}}">
                       <svg id="atras" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="80" height="80" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -38,7 +38,7 @@
                             </p>
                         </div>
                         <div id="logout">
-                            <button type="button" onclick="location.href='{{route('logOut')}}'">
+                            <button type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="80" height="80" viewBox="0 0 24 24" stroke-width="2" stroke="#D6023F" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M7 6a7.75 7.75 0 1 0 10 0" />
@@ -74,23 +74,43 @@
                               </a>
                             </li>
                             @foreach($classes as $class)
-                              <form method="POST" id="form{{ $class->idClase }}" action="{{route('CreateMateriales')}}">
-                                @csrf 
-                                <input type="hidden" name="idClase" id="idClase{{ $class->idClase }}" value="{{ $class->idClase }}">
-                                  <button type="submit" class="materia" id="button{{ $class->idClase }}" onmouseenter="mostrarCuadro()" onmouseleave="noMostrar()">
-                                      <p id="idClase{{ $class->idClase }}">{{ $class->idClase }}</p>
-                                      <p id="mat{{ $class->idClase }}" >{{ $class->NomClase }}</p>
-                                      <p id="prof{{ $class->idClase }}">{{ $class->Usuario->Nombre . " " . $class->Usuario->Apellido }}</p>
-                                      <p id="acumlab{{ $class->idClase }}">Puntos: </p>
-                                      <p id="acum{{ $class->idClase }}">{{ $class->puntaje }}</p>
-                                  </button>
-                              </form>
+                            <a href="materiales.html" onmouseenter="mostrarCuadro()" onmouseleave="noMostrar()">
+                              <li class=" materia">
+                                <p id="id">{{$class->idClase}}</p>
+                                <p id="mat">{{$class->NomClase}}</p>
+                                <p id="prof">{{$class->Usuario->Nombre . " " . $class->Usuario->Apellido}}</p>
+                                <p id="acumlab">Puntos: </p>
+                                <p id="acum">{{$class->puntaje}}</p>
+                            </a>
                             @endforeach
+                            <!--
+                            <li class=" materia">
+                              <p id="id">ID</p>
+                              <p id="mat">Clase</p>
+                              <p id="prof">Profesor</p>
+                              <p id="acumlab">Puntos: </p>
+                              <p id="acum">00000</p>
+                            </li>
+                            <li class=" materia">
+                                <p id="id">ID</p>
+                                <p id="mat">Clase</p>
+                                <p id="prof">Profesor</p>
+                                <p id="acumlab">Puntos: </p>
+                                <p id="acum">00000</p>
+                            </li>
+                            <li class=" materia">
+                                <p id="id">ID</p>
+                                <p id="mat">Clase</p>
+                                <p id="prof">Profesor</p>
+                                <p id="acumlab">Puntos: </p>
+                                <p id="acum">00000</p>
+                          </li>-->
                         </ul>
                     </div>
-                    @if(Session::get('tipo')==1)
-                      <p id="awardtag">Premios</p>
-                      <div class="premios">
+                    
+                    
+                    <p id="awardtag">Premios</p>
+                    <div class="premios">
                         <ul class="tabla">
                           <li class="table-header">
                             <div class="col col-1">ID</div>
@@ -99,25 +119,44 @@
                             <div class="col col-4">Profesor</div>
                           </li>
                           @foreach($premios as $premio)
-                            <li class="table-row">
+                          <li class="table-row">
                             <div class="col col-1" data-label="ID">{{$premio->Premio->idPremio}}</div>
                             <div class="col col-2" data-label="Premio">{{$premio->Premio->Premio}}</div>
                             <div class="col col-3" data-label="Materia">{{$premio->Premio->Recompensas->Clase->NomClase}}</div>
                             <div class="col col-4" data-label="Profesor">{{$premio->Premio->Recompensas->Clase->Usuario->Nombre}}</div>
-                            </li>
+                          </li>
                           @endforeach
+                          <!--
+                          <li class="table-row">
+                            <div class="col col-1" data-label="ID">42235</div>
+                            <div class="col col-2" data-label="Premio">Titulo universitario</div>
+                            <div class="col col-3" data-label="Materia">Quien sabe</div>
+                            <div class="col col-4" data-label="Profesor">el rector</div>
+                          </li>
+                          <li class="table-row">
+                            <div class="col col-1" data-label="ID">42235</div>
+                            <div class="col col-2" data-label="Premio">Titulo universitario</div>
+                            <div class="col col-3" data-label="Materia">Quien sabe</div>
+                            <div class="col col-4" data-label="Profesor">el rector</div>
+                          </li>
+                          <li class="table-row">
+                            <div class="col col-1" data-label="ID">42235</div>
+                            <div class="col col-2" data-label="Premio">Titulo universitario</div>
+                            <div class="col col-3" data-label="Materia">Quien sabe</div>
+                            <div class="col col-4" data-label="Profesor">el rector</div>
+                          </li>-->
                         </ul>
                       </div>
-                    @endif
+                      
                 </div>
                 
-        
+        </form>
     </div>
     <div id="message">
       <p>Haz clic para editar la clase</p>
     </div>
-    <script src="{{('js/profile.js')}}"></script>
 </body>
+<script src="js/profile.js"></script>
 </html>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

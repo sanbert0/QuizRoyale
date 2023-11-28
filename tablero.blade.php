@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeopardy!</title>
-    <link rel="stylesheet" href="css/tablero.css">
+    <link rel="stylesheet" href="{{asset('css/tablero.css')}}">
 </head>
 
 <body class="fondo">
@@ -13,7 +13,7 @@
     <p id="tem3">Tema 3</p>
     <p id="tem4">Tema 4</p>
     <div class="circul">
-        <img src="Images/Usuario_icono.png" class="imag">
+        <img src="{{asset('Images/Usuario_icono.png')}}" class="imag">
     </div>
     <div class="circur">
         
@@ -120,6 +120,7 @@
             <div>
                 <p style="color: aliceblue; text-shadow: #0a0045 0 0 10px; font-size: 1.5rem;"> Resumen del juego</p>
                 <p >Puntaje : <a id="puntos"></a> </p>
+                <input type="hidden" value="" id="puntos" name="puntaje">
                 <p id="correctas">Preguntas correctas :</p>
                 <button id="ok"> Ok </button>
             </div>
@@ -129,7 +130,7 @@
     </div>
 </body>
 </html>
-<script src="js/tablero.js"></script>
+<script src="{{asset('js/tablero.js')}}"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
